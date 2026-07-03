@@ -1,0 +1,18 @@
+services:
+  minecraft-bot:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: minecraft-bot
+    restart: unless-stopped
+    ports:
+      - "3001:3000"
+    env_file:
+      - .env
+    environment:
+      - PORT=3000
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"

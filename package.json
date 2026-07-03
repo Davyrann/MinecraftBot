@@ -1,0 +1,34 @@
+{
+  "name": "MinecraftBot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "11.3.0",
+      "onFail": "download"
+    }
+  },
+  "type": "commonjs",
+  "dependencies": {
+    "discord.js": "^14.26.4",
+    "dotenv": "^17.4.2",
+    "express": "^4.19.2",
+    "minecraft-data": "^3.111.0",
+    "mineflayer": "^4.37.1",
+    "mineflayer-physics": "^0.0.9",
+    "prismarine-nbt": "^2.8.0",
+    "prismarine-registry": "^1.12.0",
+    "prismarine-block": "^1.23.0",
+    "prismarine-chunk": "^1.40.0",
+    "prismarine-physics": "^1.11.0"
+  }
+}
