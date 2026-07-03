@@ -65,21 +65,3 @@ node index.js
 ```
 Setelah berjalan, buka browser Anda dan akses dashboard pada:
 `http://localhost:3000`
-
----
-
-## 🔒 Keamanan Data (Security)
-
-Proyek ini telah dikonfigurasi agar data sensitif tidak bocor ke Git. Berkas-berkas berikut telah ditambahkan ke `.gitignore` sehingga **aman** dari proses commit dan upload ke GitHub:
-- `.env` (Berkas konfigurasi environment lokal).
-- `config.json` (Menyimpan riwayat password, konfigurasi server Minecraft, dan pemicu auto-reply Anda).
-- `node_modules/` dan folder build sementara.
-
----
-
-## 💬 Pertanyaan Umum (FAQ)
-
-### *Apakah patch-patch yang kita buat tetap bekerja saat dibagikan ke GitHub?*
-**Ya, 100% bekerja.** Seluruh *monkey-patching* (perbaikan skema paket `entity_teleport`, data biome, dan `prismarine-nbt`) ditulis langsung di bagian atas berkas start-up `index.js`. Perbaikan ini bekerja di level memori saat server Node dijalankan pertama kali. 
-
-Siapa pun yang meng-clone proyek ini dari GitHub Anda akan langsung menikmati fitur penambalan protokol ini secara otomatis tanpa perlu memodifikasi berkas di dalam folder `node_modules` mereka secara manual.
